@@ -30,7 +30,7 @@ All other inputs should be integers.
 
 #### Lets make a withdraw now.
 
-![makeWithdraw2](Assets/makeWithdraw2.png)
+![makeWithdraw2](Assets/makewithdraw2.png)
 
 #### Finally we have a balance of $50.00 
 ![newBalance2](Assets/newBalance2.png)
