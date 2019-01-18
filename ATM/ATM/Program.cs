@@ -42,6 +42,7 @@ namespace ATM
                     return Exit(accountBalance);
 
                 default:
+                    Console.Clear();
                     return Menu(accountBalance);
             }
         }
@@ -50,6 +51,7 @@ namespace ATM
         {
             try
             {
+                Console.Clear();
                 Console.WriteLine($"Your balance is {balance}");
                 return balance;
             }
@@ -74,8 +76,10 @@ namespace ATM
                 if (accountBalance >= withdrawAmount)
                 {
                     accountBalance -= withdrawAmount;
+                    Console.Clear();
                     return accountBalance;
                 }
+                Console.Clear();
                 Console.WriteLine("insufficient funds");
                 return accountBalance;
             }
@@ -91,8 +95,6 @@ namespace ATM
             Console.WriteLine("How much would you like to withdraw?");
             string amount = Console.ReadLine();
             Int32.TryParse(amount, out int withdrawAmount);
-            //Console.Clear();
-            //seperate the line below so i can print the remaining balance after the withdraw
             return Menu(_Withdraw(accountBalance, withdrawAmount));
         }
 
@@ -101,6 +103,7 @@ namespace ATM
             try
             {
                 accountBalance += depositAmount;
+                Console.Clear();
                 return accountBalance;
             }
             catch (Exception e)
